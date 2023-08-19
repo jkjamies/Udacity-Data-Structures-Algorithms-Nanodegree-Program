@@ -1,0 +1,30 @@
+Task0 analysis:
+O(1) time complexity, really it makes 3 operations (high level) for the first
+printout and 4 operations (high level) for the second printout. O(3) and O(4),
+but the whole thing is O(7) plus the print statements. So O(7) + O(2) = O(9) -
+however, this is easily reduced down to O(1) because of constants.
+
+Task1 analysis:
+O(n) time complexity, because the for loop is O(n) and the print statement is
+looping through each call. More precisely, it makes two possible append calls,
+a length call, and print call. So O(2n) + O(2) = O(2n + 2) = O(n)
+
+Task2 analysis:
+O(n) time complexity, because the for loop. Specifically, we make up to 2 calls
+ within the loop and a two max calls on the return, and the print call itself.
+ This leads to O(2n) + O(2) + O(1) = O(2n + 3) = O(n)
+
+Task3 analysis:
+PartA: O(nlogn) time complexity, O(n) for the loop, sorted set costs an
+additional O(nlogn), and call within the loop for appending a value. This leads
+ to O(n) + O(nlogn) + O(1) = O(nlogn). There is also a loop for the prints O(n)
+Part B: O(n) time complexity, O(n) for the loop, and O(1) for the print call.
+ This leads to O(n) + O(1) = O(n) Any other constant calls are insignificant,
+ such as length call or division call.
+ 
+Task4 analysis:
+O(n) time complexity, loop for prints O(n), loop to filter out calls out but
+not received O(n), loop to filter out calls out but no texts out or received O
+(m), this leads to a complexity of O(n + m) where n in calls and m is texts.
+The constants for simple commands are excluded as constants are insignificant.
+Could be viewed as O(n) + O(m) + O(n) = O(2n + m + x) = O(n + m).
