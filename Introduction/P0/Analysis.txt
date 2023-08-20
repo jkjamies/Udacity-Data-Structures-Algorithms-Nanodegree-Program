@@ -5,10 +5,12 @@ but the whole thing is O(7) plus the print statements. So O(7) + O(2) = O(9) -
 however, this is easily reduced down to O(1) because of constants.
 
 Task1 analysis:
-O(n) time complexity, because the for loop is O(n) and the print statement is
-looping through each call. More precisely, it makes two possible append calls,
-a length call, and print call. So O(2n) + O(2) = O(2n + 2) = O(n). This ignores
- that n and m are separate. Linear time is the main thing to note.
+Absolute worst case timing is O(n^2), but on average this will be O(n) time
+complexity, because the for loop is O(n) for both the calls and the texts.
+Python set add operation is on average O(1), so the total is
+O(n) + O(n) = O(2n) = O(n) - this assumes texts and calls always same number,
+otherwise could be seen as O(n + m) where m is the number of texts and n the
+number of calls.
 
 Task2 analysis:
 O(n) time complexity, because the for loop. Specifically, we make up to 2 calls
