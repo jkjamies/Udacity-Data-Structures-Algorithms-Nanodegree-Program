@@ -20,6 +20,13 @@ def get_unique_numbers_from_calls():
             unique_numbers.append(call[0])
         if call[1] not in unique_numbers:
             unique_numbers.append(call[1])
+
+    for text in texts:
+        if text[0] not in unique_numbers:
+            unique_numbers.append(text[0])
+        if text[1] not in unique_numbers:
+            unique_numbers.append(text[1])
+
     return unique_numbers
 
 
