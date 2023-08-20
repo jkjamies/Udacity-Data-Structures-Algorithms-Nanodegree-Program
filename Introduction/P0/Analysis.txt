@@ -7,7 +7,8 @@ however, this is easily reduced down to O(1) because of constants.
 Task1 analysis:
 O(n) time complexity, because the for loop is O(n) and the print statement is
 looping through each call. More precisely, it makes two possible append calls,
-a length call, and print call. So O(2n) + O(2) = O(2n + 2) = O(n)
+a length call, and print call. So O(2n) + O(2) = O(2n + 2) = O(n). This ignores
+ that n and m are separate. Linear time is the main thing to note.
 
 Task2 analysis:
 O(n) time complexity, because the for loop. Specifically, we make up to 2 calls
@@ -21,10 +22,11 @@ additional O(nlogn), and call within the loop for appending a value. This leads
 Part B: O(n) time complexity, O(n) for the loop, and O(1) for the print call.
  This leads to O(n) + O(1) = O(n) Any other constant calls are insignificant,
  such as length call or division call.
- 
+
 Task4 analysis:
-O(n) time complexity, loop for prints O(n), loop to filter out calls out but
-not received O(n), loop to filter out calls out but no texts out or received O
-(m), this leads to a complexity of O(n + m) where n in calls and m is texts.
-The constants for simple commands are excluded as constants are insignificant.
-Could be viewed as O(n) + O(m) + O(n) = O(2n + m + x) = O(n + m).
+O(nlogn) time complexity, we gather the list of calls, list of received calls,
+list of sending texts, and list of received texts. Each of these is linear, but
+ we sort the result which is in O(nlogn) time. Using set union we can combine
+ the results of numbers we filter out of our callers list, then subtract the
+ callers list from the union result of our filter, thereby leaving us potential
+  telemarketer numbers.
