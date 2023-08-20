@@ -14,34 +14,22 @@ with open('calls.csv', 'r') as f:
 
 
 def filter_out_telemarketers():
-    possible_telemarketing_call = (
-        filter_numbers_made_call_but_not_received(
-            calls))
-    possible_telemarketing_call = (
-        filter_numbers_made_call_but_not_send_or_receive_text(
-            possible_telemarketing_call
-        ))
+    numbers_making_calls = {call[0] for call in calls}
+    numbers_receiving_calls = {call[1] for call in calls}
+    numbers_sending_texts = {text[0] for text in texts}
+    numbers_receiving_texts = {text[1] for text in texts}
 
-    possible_telemarketers = []
-    for possible_telemarketer in possible_telemarketing_call:
-        if possible_telemarketer[0] not in possible_telemarketers:
-            possible_telemarketers.append(possible_telemarketer[0])
+    callers = numbers_making_calls
 
-    return possible_telemarketers
+    numbers_to_avoid = (
+        numbers_receiving_calls
+        .union(numbers_sending_texts)
+        .union(numbers_receiving_texts)
+    )
 
+    telemarketers = callers - numbers_to_avoid
 
-def filter_numbers_made_call_but_not_received(possible_telemarketers):
-    return [call for call in possible_telemarketers if call[1] not in call[0]]
-
-
-def filter_numbers_made_call_but_not_send_or_receive_text(
-        possible_telemarketers):
-    text0_set = {text[0] for text in texts}
-    text1_set = {text[1] for text in texts}
-    return [
-        call for call in possible_telemarketers
-        if call[0] not in text0_set and call[0] not in text1_set
-    ]
+    return telemarketers
 
 
 print('These numbers could be telemarketers: ')
