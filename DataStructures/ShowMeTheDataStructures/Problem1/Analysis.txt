@@ -1,0 +1,39 @@
+Problem1:
+
+
+
+Design Choice:
+Two designs were considered: OrderedDict and Doubly Linked List with Dict.
+
+OrderedDict (used):
+Part of the standard library for python.
+Simpler to implement. Abstracts underlying data structures.
+Overhead of the abstraction can be seen as a negative.
+
+Doubly Linked List with Dict (did not use):
+More explicit implementation, and more control over the underlying data structures.
+Although transparent, more complex to implement because of the verbosity.
+
+
+
+Time Complexity:
+
+Get: O(1)
+Check if key is present in the dictionary: O(1)
+Move the key to the end of the dictionary: O(1)
+
+Set: O(1)
+Check length of the dictionary: O(1)
+Add a key-value pair to the dictionary: O(1)
+Remove the first key in the dictionary: O(1)
+
+
+
+Space Complexity: O(n) - where n is the capacity of the cache.
+
+
+
+Added Tests:
+None Value Test: Test that the cache can handle None values.
+Large Value Test: Test that the cache can handle large values.
+Empty Cache Test: Test that the cache can handle empty values.

@@ -1,0 +1,23 @@
+Problem5:
+
+
+
+Design Choice:
+Tail reference can improve efficiency. The rest of the hashing is provided.
+
+
+
+Time Complexity:
+O(n) for each append operation, and appending n blocks can lead to O(n^2). A
+tail reference can improve on this and lead to constant-tie O(1) block
+appending, and appending n blocks can lead to O(n).
+
+Calculating the has is constant time, and traversal of the blockchain is O(n).
+
+
+
+Added Tests:
+Two blocks in blockchain - normal case
+Empty blockchain - edge case
+Block with lot of data - edge case
+Lot of blocks in blockchain - edge case

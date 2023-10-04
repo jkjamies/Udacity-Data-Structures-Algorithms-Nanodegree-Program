@@ -1,0 +1,33 @@
+Problem6:
+
+
+
+Design Choice:
+
+Union:
+Traverse lists and add elements to a set, combine sets, return linked list.
+
+Intersection:
+Traverse one list and add to set, traverse second list and check if current
+element is in first set, if so add to the intersection set, return linked list.
+
+
+
+Time Complexity:
+
+Union:
+O(n+m) - where n is the length of the first list and m is the length of the
+second list. Adding elements to sets is O(1), so it is just the traversal of
+the two lists to consider. Union operation is worst case O(n+m) for all
+elements of boths sets.
+
+Intersection:
+O(n+m) - Traversing the first list is O(n), traversing the second list for
+intersection elements is O(m). Resulting linked list is O(min(n,m)).
+
+
+
+Added Tests:
+Union and Intersection with two empty lists
+Union and Intersection with one empty list
+Union and Intersection with no empty lists

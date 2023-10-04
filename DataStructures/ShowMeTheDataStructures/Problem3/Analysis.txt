@@ -1,0 +1,53 @@
+Problem3:
+
+
+
+Design Choice:
+Created a node class to represent nodes of a Huffman tree, each carrying
+information about a character, its frequency and the optional pointers to the
+left and right children. Typical for a binary tree. Using a heap to store the
+nodes, so that the node with the lowest frequency is always at the top makes
+sense here to lower the complexity of sorting elements.
+
+
+
+Time Complexity:
+
+Building The Huffman Tree:
+O(nlogn) - where n is the number of unique characters in the input string.
+Inserting or removing each unique character is O(logn) and we do this n times.
+
+Building The Huffman Code:
+O(n) - where n is the number of unique characters in the input string.
+Traversing the tree to find the code for each character is O(n).
+
+Encoding:
+O(n) or O(m) - where n or m is the length of the input string, not number of
+unique characters.
+
+Decoding:
+O(mlogn) - where m is the length of the input string and n is the number of
+unique characters.
+
+
+
+Space Complexity:
+
+Building The Huffman Tree:
+O(n) - space for the heap
+
+Building The Huffman Code:
+O(logn) - balanced trees but worst case O(n), technically
+
+Encoding:
+O(m) for encode_data and O(n) for codez
+
+Decoding:
+O(m) for the decoded_data
+
+
+
+Added Tests:
+Basic Test - normal case
+Empty String Test - edge case
+String With One Character Test - edge case

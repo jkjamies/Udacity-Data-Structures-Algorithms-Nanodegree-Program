@@ -1,0 +1,31 @@
+Problem4:
+
+
+
+Design Choice:
+Chose to use recursion because it is how user directories work in a file system.
+
+
+
+Time Complexity:
+O(n*m) - where n is the number of groups including all child groups, and m is
+the average number of users in a group, leading to worst case O(n*m).
+
+
+
+Space Complexity:
+O(n) - where n is the depth of the deepest nesting of the groups.
+
+
+
+Added Tests:
+Sub-child-user in parent group
+Non-existent user in parent group
+None user in not in parent group
+
+
+
+Improvement Ideas:
+Earlier exits?
+Flattened structuring?
+Memoization/caching?

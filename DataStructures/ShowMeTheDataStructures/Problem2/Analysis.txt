@@ -1,0 +1,28 @@
+Problem2:
+
+
+
+Design Choice:
+Recursive solution chosen as it naturally fits the problem and is more readable
+as well as easier to implement than an iterative solution. Traversing file
+structure is a naturally recursive problem. Several os functions were used to
+solve this as indicated in the problem statement and hints.
+
+
+
+Time Complexity:
+O(n) - where n is the total number of files+directories in the structure.
+
+Space Complexity: O(n) - where n is the depth of the file structure.
+
+
+
+Added Tests:
+Find all ".c" files - this was the problem statement - normal case
+Edge case - non-existing suffix
+Edge case - empty directory path
+Edge case - null suffix and path
+Edge case - empty suffix
+Find all ".h" files - function signature given doesn't only handle ".c" files,
+so this was added to test that it works for other suffixes as well - normal
+case
