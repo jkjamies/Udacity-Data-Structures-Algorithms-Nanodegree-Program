@@ -1,0 +1,25 @@
+Problem2:
+
+
+
+Design Choice:
+Modified binary search can solve this because the array is originally sorted
+and then rotated so we know that at any given midpoint it is still sorted.
+
+
+
+Time Complexity: O(log n) - where n is the number of elements in the array.
+
+
+
+Space Complexity: O(1)
+
+
+
+Added Test Cases:
+An Empty Array
+Empty Array with None
+Number not in List
+First/Lowest Number in List
+Last/Highest Number in List
+Large Values

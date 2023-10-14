@@ -1,0 +1,28 @@
+Problem6:
+
+
+
+Design Choice:
+We can solve this with a single traversal by initializing a min and max element
+ to the first element in the list. Then we can iterate through the list and
+ compare each element to the min and max. If the element is less than the min,
+ we can update the min. If the element is greater than the max, we can update
+ the max. At the end of the traversal, we will have the min and max elements
+ which we can return in a tuple. Edge-case: if the list is empty, we can return
+  None.
+
+
+
+Time Complexity: O(n) - where n is the number of elements in the list
+
+
+
+Space Complexity: O(1)
+
+
+
+Added Test Cases:
+Empty list
+List with a single element
+List with large numbers
+List with negative numbers

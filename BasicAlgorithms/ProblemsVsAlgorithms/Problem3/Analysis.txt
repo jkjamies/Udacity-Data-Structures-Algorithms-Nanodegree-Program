@@ -1,0 +1,26 @@
+Problem3:
+
+
+
+Design Choice:
+Merge sort can be chosen for the stable time complexity of O(n log n). This can
+ be used to sort values into descending order, which then can be used to
+ maximize the two numbers' sum. Edge-cases handled are an empty input list or a
+  list with only 1 element. A recursive approach for a standing merge-sort
+  implementation was chosen.
+
+
+
+Time Complexity: O(n log n) - where n is the number of elements in the array.
+This is the typical merge-sort time complexity, and the solution is only a
+slightly modified version of merge-sort.
+
+
+
+Space Complexity: O(n) - breaking down n inputs into sub-arrays. This comes
+from the dividing of the array and conquering (merging) of them sorted.
+
+
+
+Added Test Cases:
+Empty list

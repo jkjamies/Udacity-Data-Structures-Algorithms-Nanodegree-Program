@@ -1,0 +1,26 @@
+Problem4:
+
+
+
+Design Choice:
+Three pointer approach can help us solve this efficiently in O(n) time and O(1)
+ space. This can be done by maintaining a left pointer (0s), right pointer (2s)
+ , and a current pointer for traversing the list. We swap the current element
+ if it is 0 or 2 and increment the corresponding pointers. This is done in
+ place which keeps space complexity constant.
+
+
+
+Time Complexity: O(n) - where n is the length of the input list. We process all
+ elements in the list once.
+
+
+
+Space Complexity: O(1)
+
+
+
+Added Test Cases:
+Empty List
+List with Large Values
+List with only 1s

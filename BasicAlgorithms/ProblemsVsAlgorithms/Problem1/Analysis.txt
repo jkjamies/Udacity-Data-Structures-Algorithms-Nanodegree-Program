@@ -1,0 +1,19 @@
+Problem1:
+
+
+
+Design Choice:
+A simple binary search can solve this problem by checking num * num as we go.
+
+
+
+Time Complexity: O(log n) - where n is the number of elements in the array.
+
+
+
+Space Complexity: O(1)
+
+
+
+Added Test Cases:
+-1, expect -1

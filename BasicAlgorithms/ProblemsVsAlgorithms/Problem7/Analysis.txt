@@ -1,0 +1,23 @@
+Problem7:
+
+
+
+Design Choice:
+Majority of this was spelled out in the problem statement.
+
+
+
+Time Complexity:
+
+Insertion - O(n) - where n is the number of path parts/segments in the route
+
+Lookup - O(n) - where n is the number of path parts in the route to look up
+
+
+
+Space Complexity: O(m) - where m is the total number of nodes in the trie,
+worst case all are unique
+
+
+
+Added Test Cases: N/A - was covered
