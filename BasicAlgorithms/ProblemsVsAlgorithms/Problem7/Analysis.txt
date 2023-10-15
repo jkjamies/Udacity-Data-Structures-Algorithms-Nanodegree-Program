@@ -2,21 +2,94 @@ Problem7:
 
 
 
+
+
 Design Choice:
-Majority of this was spelled out in the problem statement.
+The Majority of this was spelled out in the problem statement.
+
+
 
 
 
 Time Complexity:
 
-Insertion - O(n) - where n is the number of path parts/segments in the route
-
-Lookup - O(n) - where n is the number of path parts in the route to look up
 
 
+RouteTrie:
 
-Space Complexity: O(m) - where m is the total number of nodes in the trie,
-worst case all are unique
+Insert:
+O(n) - where n is the length of the path_parts list, worst case you
+need to iterate through all parts of the path to insert a new handler.
+
+Find:
+O(n) - where n is the length of the path_parts list, worst case you need
+to iterate through all parts of the path to find the associated handler.
+
+
+
+RouteTrieNode:
+
+Insert:
+O(1) - because it inserts a node into the children dictionary of the
+which is constant time complexity.
+
+
+
+Router:
+
+AddHandler:
+O(n), where n is the number of parts in the path. It calls the insert method of
+RouteTrie, which has a time complexity of O(n).
+
+Lookup:
+O(n), where n is the number of parts in the path. It calls the find method of
+RouteTrie, which has a time complexity of O(n).
+
+SplitPath:
+O(n), where n is the length of the path string. It splits the path string into
+parts, which requires iterating through the string.
+
+
+
+
+
+Space Complexity:
+
+
+
+RouteTrie:
+
+Insert:
+O(n) - since you store the path_parts as a list, which requires space
+proportional to the length of the path.
+
+Find:
+O(1) - no additional data structures are used.
+
+
+
+RouteTrieNode:
+
+Insert:
+O(1) - no additional data structures are used.
+
+
+
+Router:
+
+AddHandler:
+O(n), as it stores the path_parts as a list, which requires space proportional
+to the length of the path.
+
+Lookup:
+O(n), as it stores the path_parts as a list, which requires space proportional
+to the length of the path.
+
+SplitPath:
+O(n), as it returns a list of path parts, which requires space proportional to
+the length of the path.
+
+
 
 
 

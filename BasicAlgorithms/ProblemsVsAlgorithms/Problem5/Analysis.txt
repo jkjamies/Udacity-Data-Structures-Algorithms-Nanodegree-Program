@@ -1,0 +1,83 @@
+Problem6:
+
+
+
+Design Choice:
+We can solve this with a single traversal by initializing a min and max element
+ to the first element in the list. Then we can iterate through the list and
+ compare each element to the min and max. If the element is less than the min,
+ we can update the min. If the element is greater than the max, we can update
+ the max. At the end of the traversal, we will have the min and max elements
+ which we can return in a tuple. Edge-case: if the list is empty, we can return
+  None.
+
+
+
+Time Complexity:
+
+
+
+TrieNode:
+
+insert:
+O(1) - adds a single character as a child node
+
+suffix:
+O(n) - where n is the total number of characters in all suffixes below the
+current node
+
+
+
+Trie:
+
+insert:
+O(l), where l is the length of the word being inserted
+
+find:
+O(n), where n is the length of the prefix, iterating through each
+
+
+
+f(prefix):
+O(l + n) - find takes O(l) time where l is the length of the prefix
+and n is the number of prefixes found to be printed
+
+
+
+
+
+Space Complexity:
+
+
+
+TrieNode:
+
+insert:
+O(1) - basic assignment and dictionary operations
+
+suffix:
+O(m) - where m is the total number of nodes in the subtree rooted at the
+current node
+
+
+
+Trie:
+
+insert:
+O(l), where l is the length of the word being inserted
+
+find:
+O(1) - only fixed sized variables created
+
+
+
+f(prefix):
+O(l) - length of prefix to hold in memory
+
+
+
+Added Test Cases:
+Empty list
+List with a single element
+List with large numbers
+List with negative numbers
