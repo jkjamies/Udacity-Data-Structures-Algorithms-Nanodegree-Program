@@ -13,12 +13,49 @@ We can solve this with a single traversal by initializing a min and max element
 
 
 
+
+
+Building a Trie in Python:
+
+
 Time Complexity:
 
+TrieNode:
+insert:
+O(1) - basic assignment and dictionary operations, limited by size of alphabet
 
+Trie:
+insert:
+O(n) - where n is the length of the word to insert due to iterating over each
+character in the word
+
+find:
+O(n) - where n is the length of the prefix, worst case iterating over every
+character in the prefix
+
+
+Space Complexity:
 
 TrieNode:
+insert:
+O(1) - single character insertion
 
+Trie:
+insert:
+O(n) - where n is the length of the word to insert due to needing n new
+TrieNode instances, each TrieNode storing a character in the dictionary
+
+find:
+O(1) - N/A
+
+
+
+
+
+Finding Suffixes:
+
+
+Time Complexity:
 insert:
 O(1) - adds a single character as a child node
 
@@ -27,30 +64,7 @@ O(n) - where n is the total number of characters in all suffixes below the
 current node
 
 
-
-Trie:
-
-insert:
-O(l), where l is the length of the word being inserted
-
-find:
-O(n), where n is the length of the prefix, iterating through each
-
-
-
-f(prefix):
-O(l + n) - find takes O(l) time where l is the length of the prefix
-and n is the number of prefixes found to be printed
-
-
-
-
-
 Space Complexity:
-
-
-
-TrieNode:
 
 insert:
 O(1) - basic assignment and dictionary operations
@@ -61,18 +75,22 @@ current node
 
 
 
-Trie:
-
-insert:
-O(l), where l is the length of the word being inserted
-
-find:
-O(1) - only fixed sized variables created
 
 
+Testing It All Out:
 
+
+Time Complexity:
+f(prefix):
+O(l + n) - find takes O(l) time where l is the length of the prefix
+and n is the number of prefixes found to be printed
+
+
+Space Complexity:
 f(prefix):
 O(l) - length of prefix to hold in memory
+
+
 
 
 
